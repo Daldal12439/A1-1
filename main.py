@@ -1,4 +1,5 @@
 print("나만의 프롬프트 관리 프로그램")
+
 prompts = [
     {
         "title": "로판 캐릭터 이미지 생성",
@@ -19,6 +20,41 @@ prompts = [
         "favorite": False
     }
 ]
+
+
+def add_prompt():
+    print("\n=== 프롬프트 추가 ===")
+
+    while True:
+        title = input("제목: ")
+        if title:
+            break
+        print("제목을 입력해주세요.")
+
+    while True:
+        content = input("내용: ")
+        if content:
+            break
+        print("내용을 입력해주세요.")
+
+    while True:
+        category = input("카테고리: ")
+        if category:
+            break
+        print("카테고리를 입력해주세요.")
+
+    prompt = {
+        "title": title,
+        "content": content,
+        "category": category,
+        "favorite": False
+    }
+
+    prompts.append(prompt)
+
+    print("프롬프트가 추가되었습니다!")
+
+
 def show_menu():
     print("\n=== 나만의 프롬프트 관리 ===")
     print("1. 프롬프트 추가")
@@ -29,12 +65,13 @@ def show_menu():
     print("6. 즐겨찾기 관리")
     print("7. 즐겨찾기 목록")
     print("0. 종료")
-    
+
     choice = input("선택: ")
 
     if choice == "1":
-        print("프롬프트 추가 기능입니다.")
+        add_prompt()
     elif choice == "0":
         print("프로그램을 종료합니다.")
-        
+
+
 show_menu()
