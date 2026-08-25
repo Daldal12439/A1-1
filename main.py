@@ -32,5 +32,9 @@ def show_menu():
     
     choice = input("선택: ")
 
-
+    if choice == "1":
+        print("프롬프트 추가 기능입니다.")
+    elif choice == "0":
+        print("프로그램을 종료합니다.")
+        
 show_menu()
