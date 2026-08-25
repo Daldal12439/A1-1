@@ -29,5 +29,8 @@ def show_menu():
     print("6. 즐겨찾기 관리")
     print("7. 즐겨찾기 목록")
     print("0. 종료")
+    
+    choice = input("선택: ")
+
 
 show_menu()
